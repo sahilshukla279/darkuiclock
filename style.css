@@ -1,0 +1,157 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #091821; 
+}
+.clock
+{
+	width:350px;
+	height: 350px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	background: url(clock.png);
+	background-size: cover;
+	border: 4px solid #091921;
+	border-radius: 50%;
+	box-shadow: 0 -15px 15px rgba(255,255,255,0.05),
+				inset 0 -15px 15px rgba(255,255,255,0.05),
+				0 15px 15px rgba(0,0,0,0.3),
+				inset 0 15px 15px rgba(0,0,0,0.3)
+}
+.clock:before
+{
+	content: '';
+	position: absolute;
+	width:15px;
+	height: 15px;
+	background: #fff;
+	border-radius: 50%;
+	z-index:10000;
+}
+.clock .hour,
+.clock .min,
+.clock .sec
+{
+	position: absolute;
+}
+.clock .hour, .hr
+{
+	width:160px;
+	height:160px;
+}
+.clock .min, .mn
+{
+	width:190px;
+	height:190px;
+}
+.clock .sec, .sc
+{
+	width: 230px;
+	height: 230px;
+}
+.hr, .mn, .sc
+{
+	display:flex;
+	justify-content: center;
+	position: absolute;
+	border-radius: 50%;
+}
+.hr:before
+{
+	content: '';
+	position: absolute;
+	width:8px;
+	height: 80px;
+	background: #ff105e;
+	z-index:10;
+	border-radius: 6px 6px 0 0;
+}
+.mn:before
+{
+	content: '';
+	position: absolute;
+	width:4px;
+	height: 90px;
+	background: #fff;
+	z-index: 11;
+	border-radius: 6px 6px 0 0;
+}
+.sc:before
+{
+	content: '';
+	position: absolute;
+	width:2px;
+	height: 150px;
+	background: #fff;
+	z-index:12;
+	border-radius: 6px 6px 0 0;
+}
+
+
+#footer{
+	position:absolute;
+	bottom:0;
+	width:100%;  
+	color: #ffffff;
+	padding:10px 10px;
+	
+ }
+ 
+ #footer h2 {
+	 font-size:16px;
+	 font-weight:bold;
+	 font-family: 'Lato',sans-serif;
+	 float:right;
+ }
+
+ #footer .icons{
+	top:50%;
+    text-align: center;
+    position: absolute;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    color: #fafafa;
+  }
+#footer .icons a{
+   
+    width: 40px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-left:2px;
+    transition: all 0.3s ease;
+  }
+
+  #footer .icons a:first-child{
+    margin-left: 0px;
+  }
+
+#footer #ss{
+	float:center;
+	margin-left: 50%;;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
