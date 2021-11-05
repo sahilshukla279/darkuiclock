@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dark Clock UI</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+	<div class="clock">
+		<div class="hour">
+			<div class="hr" id="hr"></div>
+		</div>
+			<div class="min">
+			<div class="mn" id="mn"></div>
+		</div>
+				<div class="sec">
+					<div class="sc" id="sc"></div>
+				</div>
+	</div>
+	
+	<div id="footer">
+
+		<div class="icons" id="icons">
+                <a href="https://www.facebook.com/profile.php?id=100008146035214"><i id="fb"class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/SaahilShukla"><i id="tw" class="fab fa-twitter"></i></a>
+                <a href="https://github.com/sahilshukla279"><i  id="gh" class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/saahil-shukla-4b5182201/"><i id="ln" class="fab fa-linkedin"></i></a>
+                <a href="https://medium.com/@sahilshukla279"><i id="me" class="fab fa-medium"></i></a>
+              </div>
+			<p id="ss">By: Saahil Shukla</p>
+
+        <h2 id="100day">#100DaysofCode</h2>
+</div>
+	<script type="text/javascript">
+		const deg = 6;
+		const hr = document.querySelector('#hr');
+		const mn = document.querySelector('#mn');
+		const sc = document.querySelector('#sc');
+
+		setInterval(() => {
+
+			let day = new Date();
+			let hh = day.getHours() * 30;
+			let mm = day.getMinutes() * deg;
+			let ss = day.getSeconds() * deg;
+
+			hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+			mn.style.transform = `rotateZ(${mm}deg)`;
+			sc.style.transform = `rotateZ(${ss}deg)`;
+		})
+		
+	</script>
+</html>
